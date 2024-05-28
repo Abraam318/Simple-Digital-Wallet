@@ -33,6 +33,15 @@ Welcome to the Simple Digital Wallet! This project provides a comprehensive digi
 3. **vector<Transaction> RequestHistory**: Stores transaction history specifically for money requests.
 4. **queue<char> passwordQueue**: Used for collecting characters for password input with masking.
 
+## Project's Schema
+
+![schema](schema.png)
+
+In this schema, users are stored in the **Users** table with attributes like address, name, balance, etc. 
+The **Transactions** table logs all transactions, including sender and receiver addresses, amounts, and types.
+Similarly, the **RequestHistory** table tracks money requests between users, with sender and receiver addresses, amounts, and timestamps. 
+Both transactions and requests are associated with users via their addresses.
+
 ## File Handling
 
 The `Files` class is responsible for reading data from and writing data to files. It reads user information, transaction history, and request history from files and populates the respective data structures. Saving data to files is assumed to be implemented similarly.
