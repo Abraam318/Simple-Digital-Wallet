@@ -12,8 +12,6 @@ public:
         string SAddress;
         string RAddress;
         double amount;
-        bool Accepted = false;
-        int PendigStatus = -1; // is pending
         string Type;
     };
 
@@ -24,24 +22,21 @@ public:
         string email;
         string phone_number;
         bool isAdmin = false;
-        bool isActive = true; // New attribute to track account status
+        bool isActive = true;
     };
 
-    int TransactionCounter =0;
-    int response = 0;
     vector<Transaction> transactions;
-    vector<Transaction> History;
     vector<Transaction> RequestHistory;
-    unordered_map<string, User> mapOfUsers;
+
+public: unordered_map<string, User> mapOfUsers;
 
     void delay(int milliseconds);
     void init();
     bool isadmin(string address);
     void Send(string SAddress, string RAddress, double amount);
-    void AddRec(Transaction tra);
     void Req(string SA, string RA, double amount);
     void MyHistory(string SAddress);
-    void notification();
+    void notification(string Address);
     bool withdrawal(string address, double amount);
     void deposit(string address, double amount);
     bool login(string address, string password);
@@ -49,4 +44,6 @@ public:
     void viewBalance(string address);
     void editProfile(string address);
     string Hash(const string& password);
+    string maskedInput();
+
 };

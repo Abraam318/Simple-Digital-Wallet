@@ -6,8 +6,9 @@
 #include <queue>
 #include <stdexcept>
 #include "DigitalWallet.h"
-
+#include "Files.h"
 using namespace std;
+
 
 DigitalWallet del;
 
@@ -118,7 +119,8 @@ void mainMenuUser(DigitalWallet& mywallet, const string& userAddress) {
                         if (amount <= 0) {
                             cout << "Please enter a valid amount";
                             continue;
-                        }                        if (mywallet.withdrawal(userAddress, amount)) {
+                        }
+                        if (mywallet.withdrawal(userAddress, amount)) {
                             cout << "Withdrawal successful!" << endl;
                         }
                         else {
@@ -156,8 +158,9 @@ void mainMenuUser(DigitalWallet& mywallet, const string& userAddress) {
                             continue;
                         }
 
+
                         mywallet.Send(userAddress, recipient, amount);
-                        cout << "Transaction sent successfully!" << endl;
+
 
                         string tryAgain;
                         cout << "\nDo you want to send money to another recipient?\n Y=> Yes / other key => No: ";
@@ -210,7 +213,7 @@ void mainMenuUser(DigitalWallet& mywallet, const string& userAddress) {
                     break;
                 }
                 case 7: {
-                    mywallet.notification();
+                    mywallet.notification(userAddress);
                     break;
                 }
                 case 8: {
@@ -253,7 +256,7 @@ void AdminMenu(DigitalWallet& mywallet) {
             del.delay(500);
             cout << "1. Edit User Profile" << endl;
             del.delay(500);
-            cout << "2. View All Transactions" << endl;
+            cout << "2. View Transactions" << endl;
             del.delay(500);
             cout << "3. Create New User" << endl;
             del.delay(500);
@@ -286,15 +289,25 @@ void AdminMenu(DigitalWallet& mywallet) {
                 }
                 case 2: {
                     do {
-                        cout << "\n===== All Transactions =====" << endl;
-                        for (const auto& transaction : mywallet.History) {
-                            cout << "Transaction Type: " << transaction.Type << endl;
-                            cout << "Sender Address: " << transaction.SAddress << endl;
-                            cout << "Receiver Address: " << transaction.RAddress << endl;
-                            cout << "Amount: $" << transaction.amount << endl;
-                            cout << "============================" << endl;
+                        cout << "Do you want to see Transactions for a specific user?\n Y=> Yes / other key => No: ";
+                        string ans;
+                        cin >> ans;
+                        if (ans != "Y" && ans != "y") {
+                            cout << "\n===== All Transactions =====" << endl;
+                            for (const auto& transaction : mywallet.transactions) {
+                                cout << "Transaction Type: " << transaction.Type << endl;
+                                cout << "Sender Address: " << transaction.SAddress << endl;
+                                cout << "Receiver Address: " << transaction.RAddress << endl;
+                                cout << "Amount: $" << transaction.amount << endl;
+                                cout << "============================" << endl;
+                            }
                         }
-
+                        else {
+                            cout << "Enter the address of the specific user: ";
+                            string add;
+                            cin >> add;
+                            mywallet.MyHistory(add);
+                        }
                         string tryAgain;
                         cout << "\nDo you want to view transactions again?\n Y=> Yes / other key => No: ";
                         cin >> tryAgain;
@@ -427,7 +440,7 @@ int main() {
     int choice;
     bool loggedIn = false;
     string userAddress;
-
+    Files f;
     mywallet.init();
     do {
         cout << "\n======================================" << endl;
@@ -441,7 +454,6 @@ int main() {
         cout << "3. Exit" << endl;
         del.delay(500);
         cout << "Enter your choice:- ";
-
         try {
             cin >> choice;
             if (cin.fail()) {
@@ -485,6 +497,9 @@ int main() {
                 }
                 case 3: {
                     cout << "Exiting..." << endl;
+                    f.saveTo(mywallet.mapOfUsers);
+                    f.saveToTrans(mywallet.transactions);
+                    f.saveToNot(mywallet.RequestHistory);
                     exit(0);
                 }
                 default: {

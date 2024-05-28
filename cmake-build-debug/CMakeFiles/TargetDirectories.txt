@@ -1,0 +1,3 @@
+D:/FCIS26/Second Year/DS project/untitled/cmake-build-debug/CMakeFiles/Mariam_s_Final.dir
+D:/FCIS26/Second Year/DS project/untitled/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/FCIS26/Second Year/DS project/untitled/cmake-build-debug/CMakeFiles/rebuild_cache.dir
