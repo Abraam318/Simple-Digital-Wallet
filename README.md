@@ -1,4 +1,4 @@
-# Digital Wallet Application
+# Simple Digital Wallet
 
 ![Digital Wallet](bg.jpg)
 
@@ -66,11 +66,11 @@ To use the Digital Wallet application, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/Abraam318/digital-wallet.git
+    git clone https://github.com/Abraam318/Simple-Digital-Wallet.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd digital-wallet
+    cd Simple-Digital-Wallet
     ```
 3. Compile and run the project.
 
