@@ -1,6 +1,6 @@
 # Simple Digital Wallet
 
-![Simple Digital Wallet](DigitalWallet_bg.png)
+![Simple Digital Wallet](bg.jpg)
 
 ## Table of Contents
 
@@ -49,7 +49,7 @@ To use the Simple Digital Wallet, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/simple-digital-wallet.git
+    git clone https://github.com/Abraam/simple-digital-wallet.git
     ```
 2. Navigate to the project directory:
     ```bash
