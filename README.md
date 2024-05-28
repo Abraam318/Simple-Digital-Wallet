@@ -1,6 +1,6 @@
 # Simple Digital Wallet
 
-![Simple Digital Wallet](bg.png)
+![Simple Digital Wallet](bg.jpg)
 
 ## Table of Contents
 
