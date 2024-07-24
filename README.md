@@ -7,7 +7,7 @@
 - [Introduction](#introduction)
 - [Features](#features)
 - [Data Structures Used](#data-structures-used)
-- [Project Schema](#project-schema)
+- [Project's Schema](#projects-schema)
 - [File Handling](#file-handling)
 - [Usage](#usage)
 - [Installation](#installation)
@@ -15,38 +15,34 @@
 
 ## Introduction
 
-Welcome to the Simple Digital Wallet! This project has evolved through two versions. The original version was developed as a team project during university using C++, focusing on efficient data structures and handling financial transactions securely. The second version is a complete rewrite as a Web API using .NET technology, enhancing scalability and integrating modern web features.
+Welcome to the Simple Digital Wallet! This project provides a comprehensive digital wallet solution for managing transactions, user accounts, authentication, and more. It was initially developed as a C++ console application and later evolved into a more sophisticated version with a graphical user interface using Qt.
 
 ## Features
 
-- **User Authentication and Management**: Includes functionalities for both admins and regular users.
-- **Secure Password Handling**: Utilizes encryption and hashing for secure password management.
-- **Transaction Management**: Supports sending, requesting, and viewing transaction history.
-- **Notification System**: Handles notifications for money requests.
-- **Deposit and Withdrawal Functionalities**: Allows users to deposit and withdraw funds.
-- **Profile Management**: Enables users to edit their profile details.
-- **Error Handling**: Robust handling of various error scenarios.
+- User authentication and management (including admins and regular users)
+- Secure password handling with masking and hashing
+- Transaction management (sending money, requesting money, viewing transaction history)
+- Notification system for handling money requests
+- Deposit and withdrawal functionalities
+- Profile management (editing user details)
+- Error handling for various scenarios
 
 ## Data Structures Used
 
-1. **unordered_map<string, User> mapOfUsers**: Stores user information, with the user's address as the key and an instance of the User class as the value.
-2. **vector<Transaction> transactions**: Maintains transaction history, including sender and receiver addresses, transaction amounts, and types.
-3. **vector<Transaction> RequestHistory**: Specifically tracks transaction history related to money requests.
-4. **queue<char> passwordQueue**: Manages characters for password input with masking.
+1. **unordered_map<string, User> mapOfUsers**: Stores user information, where the key is the user's address and the value is an instance of the User class.
+2. **vector<Transaction> transactions**: Stores transaction history, including sender address, receiver address, transaction amount, and type.
+3. **vector<Transaction> RequestHistory**: Stores transaction history specifically for money requests.
+4. **queue<char> passwordQueue**: Used for collecting characters for password input with masking.
 
-## Project Schema
+## Project's Schema
 
 ![schema](schema.png)
 
-The schema represents the data structure used in both versions:
-
-- **Users Table**: Stores user information such as address, name, and balance.
-- **Transactions Table**: Logs all transactions with sender and receiver addresses, amounts, and types.
-- **RequestHistory Table**: Tracks money requests between users, including sender and receiver addresses, amounts, and timestamps.
+In this schema, users are stored in the **Users** table with attributes like address, name, balance, etc. The **Transactions** table logs all transactions, including sender and receiver addresses, amounts, and types. Similarly, the **RequestHistory** table tracks money requests between users, with sender and receiver addresses, amounts, and timestamps. Both transactions and requests are associated with users via their addresses.
 
 ## File Handling
 
-In the C++ version, the `Files` class manages reading from and writing to files, including user information and transaction history. This functionality has been adapted for the Web API version using database interactions.
+The `Files` class is responsible for reading data from and writing data to files. It reads user information, transaction history, and request history from files and populates the respective data structures. Saving data to files is assumed to be implemented similarly.
 
 ## Usage
 
@@ -54,7 +50,7 @@ To use the Simple Digital Wallet, follow these steps:
 
 1. Clone the repository.
 2. Compile and run the project using your preferred IDE or command line.
-3. For the Web API version, interact with the endpoints for user management and transactions as described in the documentation.
+3. Interact with the system using the provided interfaces for signing up, logging in, performing transactions, managing profile, etc.
 
 ## Installation
 
@@ -66,7 +62,7 @@ To use the Simple Digital Wallet, follow these steps:
     ```bash
     cd simple-digital-wallet
     ```
-3. Compile and run the project for the C++ version, or follow the .NET Web API setup instructions for the API version.
+3. Compile and run the project.
 
 ## Contributing
 
