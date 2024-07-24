@@ -1,0 +1,36 @@
+{
+	"BUILD_DIR" : "C:/Users/Abraam Adel/Downloads/Compressed/DS/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/finalds_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/Abraam Adel/Downloads/Compressed/DS/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/Abraam Adel/Downloads/Compressed/DS/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/Abraam Adel/Downloads/Compressed/DS",
+	"CMAKE_SOURCE_DIR" : "C:/Users/Abraam Adel/Downloads/Compressed/DS",
+	"INCLUDE_DIR" : "C:/Users/Abraam Adel/Downloads/Compressed/DS/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/finalds_autogen/include",
+	"INPUTS" : 
+	[
+		"C:/Users/Abraam Adel/Downloads/Compressed/DS/image/coins.jpeg",
+		"C:/Users/Abraam Adel/Downloads/Compressed/DS/image/dep.jpg",
+		"C:/Users/Abraam Adel/Downloads/Compressed/DS/image/icons8-coins-96 (1).png",
+		"C:/Users/Abraam Adel/Downloads/Compressed/DS/image/icons8-withdraw-money-50.png",
+		"C:/Users/Abraam Adel/Downloads/Compressed/DS/image/.png",
+		"C:/Users/Abraam Adel/Downloads/Compressed/DS/image/new.jpg",
+		"C:/Users/Abraam Adel/Downloads/Compressed/DS/image/icons8-request-money-100.png",
+		"C:/Users/Abraam Adel/Downloads/Compressed/DS/image/icons8-coins-96.png",
+		"C:/Users/Abraam Adel/Downloads/Compressed/DS/image/icons8-create-96.png",
+		"C:/Users/Abraam Adel/Downloads/Compressed/DS/image/icons8-transaction-90.png",
+		"C:/Users/Abraam Adel/Downloads/Compressed/DS/image/icons8-user-not-found-100.png",
+		"C:/Users/Abraam Adel/Downloads/Compressed/DS/image/781-7815113_history-icon-white-png-3772895063.png",
+		"C:/Users/Abraam Adel/Downloads/Compressed/DS/image/icons8-notification-100.png",
+		"C:/Users/Abraam Adel/Downloads/Compressed/DS/image/icons8-users-64.png",
+		"C:/Users/Abraam Adel/Downloads/Compressed/DS/image/icons8-euro-money-100.png"
+	],
+	"LOCK_FILE" : "C:/Users/Abraam Adel/Downloads/Compressed/DS/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/finalds_autogen.dir/AutoRcc_image_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "--no-zstd", "-name", "image" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_image.cpp",
+	"RCC_EXECUTABLE" : "C:/Qt/6.7.0/mingw_64/./bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "C:/Users/Abraam Adel/Downloads/Compressed/DS/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/finalds_autogen.dir/AutoRcc_image_EWIEGA46WW_Used.txt",
+	"SOURCE" : "C:/Users/Abraam Adel/Downloads/Compressed/DS/image.qrc",
+	"VERBOSITY" : 0
+}

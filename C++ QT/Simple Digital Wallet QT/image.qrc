@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>image/new.jpg</file>
+        <file>image/coins.jpeg</file>
+        <file>image/.png</file>
+        <file>image/dep.jpg</file>
+        <file>image/icons8-coins-96 (1).png</file>
+        <file>image/icons8-coins-96.png</file>
+        <file>image/icons8-create-96.png</file>
+        <file>image/icons8-euro-money-100.png</file>
+        <file>image/icons8-notification-100.png</file>
+        <file>image/icons8-request-money-100.png</file>
+        <file>image/icons8-transaction-90.png</file>
+        <file>image/icons8-user-not-found-100.png</file>
+        <file>image/icons8-users-64.png</file>
+        <file>image/icons8-withdraw-money-50.png</file>
+        <file>image/781-7815113_history-icon-white-png-3772895063.png</file>
+    </qresource>
+</RCC>
